@@ -4,35 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge Amigo Secreto FIC</title>
+    <link rel="stylesheet" href="./styles/style.css">
 
 </head>
 
 <body>
-
-    <header> 
-    
-        <a href=""> Inicio </a>
-        <a href=""> Instrucciones </a>
+    <header class="header"> 
+        <nav class="header__menu">
+            <a  class="header__menu__link" href=""> Inicio </a>
+            <a class="header__menu__link" href=""> Instrucciones </a>    
+        </nav>
         
     </header>
-    <main>
-        <h1> Sortea al amigo secreto </h1>
-
-        <div>
-
-            <input  id="valorAmigoSecreto" type="string" class="container__input">
-
-        </div>
-        <div>
-
-            <button> Adicionar  </button>
-            <button> Sortear Amigo </button>
-
-        </div>
-
+    <main class="main">
+        <section class="main__contenido">
+            <h1 class="main__contenido_titulo"> Sortea al amigo secreto </h1>
+            <div class="main__contenido__input">
+                <input  id="valorAmigoSecreto" type="string" class="container__input">
+            </div>
+            <div class="main__contenido_botones">
+                <button class="main__contenido_botones_action"> Adicionar  </button>
+                <button class="main__contenido_botones_action"> Sortear Amigo </button>
+            </div>
+            <div>
+                <p>  </p> 
+            </div>
+        </section>
+        <img  class="main__imagen" src="./assets/image.jpg" alt="Imagen_Juego_SF">
     </main>
-    <footer></footer>
-
-
+    <footer class="footer">
+        <p> Desarrollado por FERNAIC </p>
+    </footer>
 </body>
 </html>

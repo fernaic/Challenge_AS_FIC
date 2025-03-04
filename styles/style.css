@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --color-primario:#4A7023;
+    --color-secundario: #FDFAD9;
+    --color-terciario: #80CBC4;
+    --color-hover:#2E4A32;
+
+    --fuente-PS2P: "Press Start 2P", system-ui;
+    --fuente-montserrat:"Montserrat", sans-serif;
+}
+
+body{
+
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+
+}
+
+.header {
+
+
+    padding: 2% 0% 0% 15%;
+
+}
+
+
+.header__menu {
+
+    display: flex;
+    gap: 80px;
+
+}
+
+.header__menu__link {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;  
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    padding: 6% 15%;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.main__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main__contenido_titulo {
+
+    font-family: var(--fuente-PS2P);
+    font-size: 1.5 rem;
+
+}
+
+.main__contenido_botones{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.main__contenido_botones_action {
+
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.main__contenido_botones_action:hover {background-color: #3e8e41}
+
+.main__contenido_botones_action:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.main__imagen {
+
+
+    width: 50%;
+
+}
+
+.footer{
+
+
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-PS2P);
+    font-size: 1.5 rem;
+    font-weight: 400;
+
+}
