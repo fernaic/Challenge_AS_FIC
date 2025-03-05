@@ -1,4 +1,4 @@
-Challenge del Sorte del Amigo Secreto
+<em> # Challenge del Sorteo del Amigo Secreto </em>>
 
 Este proyecto es una aplicación web que permite a los usuarios ingresar nombres en una lista y realizar un sorteo aleatorio para determinar quién será el "amigo secreto".
 
