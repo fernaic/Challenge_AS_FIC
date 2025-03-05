@@ -1,51 +1,47 @@
 let amigosLista= [];
-let numeroMaximo=5;
 
 function agregarAmigo() {
 
-    let amigoInput = document.getElementById('amigo').value;
-    let listaUL = document.getElementById('listaAmigos');
+    let amigoInput = document.getElementById('amigo');
+    let nombreAmigo = amigoInput.value;
 
-    if (amigoInput.trim()=== ""){
-        alert ("No puedes ingresar vacio");
+    if (!nombreAmigo){
+        alert ("No puedes agregar vacio como nombre");
         return;
     }
-    if (amigosLista.length>=numeroMaximo){
-        alert("El limite de amigos a ingresar es de 5");
-        return;
-    }
-
-    amigosLista.push(amigoInput);
-
-
-    let nuevoElementoLista = document.createElement("li");
-    nuevoElementoLista.textContent = amigoInput;
-    listaUL.appendChild(nuevoElementoLista);
-    
+    amigosLista.push(nombreAmigo);
+    amigoInput.value = "";
+    amigoInput.focus();
+    renderizarAmigos();
 }
 
 
+function renderizarAmigos(){
+
+    let listaAmigos = document.getElementById("listaAmigos");
+    listaAmigos.innerHTML="";
+
+    for (let i = 0; i < amigosLista.length; i++ ){
+        let item = document.createElement("li");
+        item.textContent = amigosLista[i];
+        listaAmigos.appendChild(item);
+    }
+
+
+}
+
 function sortearAmigo() {
-
-    let resultadoUL = document.getElementById ("resultado");
-    let listaUL = document.getElementById ("listaAmigos")
-
     if (amigosLista.length===0){
         alert("Ingrese amigos para sortear");
         return;
     }
 
-    let numeroGenerado = Math.floor(Math.random()*numeroMaximo);
-    let amigoSorteado = amigosLista[numeroGenerado];
-    resultadoUL.innerHTML = "";
+    let amigoSorteado = amigosLista[Math.floor(Math.random()*amigosLista.length)];
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `El amigo sorteado es : ${amigoSorteado}`;
 
-    let resultadoElemento = document.createElement("li");
-    resultadoElemento.textContent = "El amigo secreto es :" + amigoSorteado;
-    resultadoUL.appendChild(resultadoElemento);
-
-    amigosLista = [];
-    listaUL.innerHTML = "";
-
+    let limpiarLista = document.getElementById ("listaAmigos");
+    limpiarLista.innerHTML="";
    
 }
 
